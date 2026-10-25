@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Задание 6 — Калькулятор услуги</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="calc.js" defer></script>
+</head>
+
+<body>
+
+  <header id="site-header">
+    <div class="container">
+      <h1 class="site-title">Лабораторная работа 6</h1>
+    </div>
+  </header>
+
+  <main id="content" class="container">
+    <section id="calc-section">
+      <h2>Калькулятор стоимости услуги</h2>
+
+      <form id="calc-form" class="calc-form" action="#" method="get" novalidate>
+
+        <div class="field">
+          <label for="quantity">Количество</label>
+          <input type="text" id="quantity" name="quantity" value="1"
+                 inputmode="numeric" autocomplete="off">
+          <p id="quantity-error" class="error" role="alert" hidden></p>
+        </div>
+
+        <fieldset class="field-group">
+          <legend>Тип услуги</legend>
+          <label class="choice">
+            <input type="radio" name="service" value="diagnostics" checked>
+            Диагностика компьютера — 1 500 ₽
+          </label>
+          <label class="choice">
+            <input type="radio" name="service" value="install">
+            Установка программ — 2 000 ₽
+          </label>
+          <label class="choice">
+            <input type="radio" name="service" value="clean">
+            Чистка от пыли — 2 500 ₽
+          </label>
+        </fieldset>
+
+        <!-- Только для типа 2: опция товара селектом -->
+        <div id="option-block" class="field dynamic" hidden>
+          <label for="option">Что устанавливаем</label>
+          <select id="option" name="option">
+            <option value="windows">Windows — без доплаты</option>
+            <option value="linux">Linux — +500 ₽</option>
+            <option value="office">Офисный пакет — +800 ₽</option>
+          </select>
+        </div>
+
+        <!-- Только для типа 3: свойство товара чекбоксом -->
+        <div id="property-block" class="field dynamic" hidden>
+          <label class="choice">
+            <input type="checkbox" id="property" name="property">
+            Заменить термопасту — +700 ₽
+          </label>
+        </div>
+
+      </form>
+
+      <p id="result" class="result" role="status">
+        <span id="result-main" class="result-main"></span>
+        <span id="result-detail" class="hint"></span>
+      </p>
+    </section>
+  </main>
+
+  <footer id="site-footer">
+    <div class="container">
+      <p>&copy; Анастасия Куликова</p>
+    </div>
+  </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,174 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  color-scheme: dark;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #dbe4f0;
+  background-color: #0b1626;
+  line-height: 1.5;
+}
+
+.container {
+  width: 100%;
+  padding: 0 12px;
+}
+
+#site-header {
+  background-color: #0a1424;
+  padding: 16px 0;
+}
+
+.site-title {
+  margin: 0;
+  font-size: 1.25rem;
+  color: #8ec5ff;
+}
+
+#content {
+  margin: 24px auto;
+}
+
+#content h2 {
+  margin: 0 0 16px;
+  font-size: 1.25rem;
+  color: #8ec5ff;
+  border-bottom: 2px solid #2b4a73;
+}
+
+.calc-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.field label {
+  font-weight: 500;
+}
+
+.field input,
+.field select {
+  width: 100%;
+  padding: 10px;
+  font: inherit;
+  color: inherit;
+  background-color: #0f2038;
+  border: 1px solid #2b4a73;
+  border-radius: 4px;
+}
+
+.field input:focus,
+.field select:focus {
+  outline: 0;
+  border-color: #4a8fe8;
+  box-shadow: 0 0 0 0.2rem rgba(74, 143, 232, 0.3);
+}
+
+.btn-submit {
+  width: 100%;
+  padding: 12px 20px;
+  font: inherit;
+  color: #ffffff;
+  background-color: #2f6fd0;
+  border: 1px solid #2f6fd0;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.btn-submit:hover {
+  background-color: #1d4f9c;
+  border-color: #1d4f9c;
+}
+
+.error {
+  margin: 0;
+  color: #ff8f8f;
+}
+
+.result {
+  margin: 20px 0 0;
+  padding: 14px 16px;
+  font-size: 1.1rem;
+  color: #dbebff;
+  background-color: #14305a;
+  border-left: 4px solid #6cb0ff;
+  border-radius: 4px;
+}
+
+.error[hidden],
+.result[hidden] {
+  display: none;
+}
+
+#site-footer {
+  background-color: #0a1424;
+  padding: 12px 0;
+  text-align: center;
+}
+
+#site-footer p {
+  margin: 0;
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 640px;
+    margin: 0 auto;
+    padding: 0 16px;
+  }
+
+  .btn-submit {
+    width: auto;
+    align-self: flex-start;
+  }
+}
+
+/* Задание 6: радиокнопки, чекбокс, динамические блоки */
+.field-group {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.field-group legend {
+  padding: 0;
+  margin-bottom: 6px;
+  font-weight: 500;
+}
+
+.choice {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 0;
+  cursor: pointer;
+}
+
+.choice input {
+  width: auto;
+  accent-color: #4a8fe8;
+}
+
+.dynamic[hidden] {
+  display: none;
+}
+
+.hint {
+  margin: 0;
+  color: #8fa6c4;
+  font-size: 0.9rem;
+}
+
+.result-main {
+  display: block;
+  font-size: 1.3rem;
+  font-weight: bold;
+}
